@@ -1,0 +1,98 @@
+body {
+  font-family: sans-serif;
+  background-color: #181819;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  box-sizing: border-box;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#calculator {
+  --calculator-width: 400px;
+  --calculator-height: 600px;
+  width: var(--calculator-width);
+  height: var(--calculator-height);
+  background-color: #c9c9c9;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#formula-wrapper {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+}
+#previous-formula {
+  width: 100%;
+  height: 30%;
+  background-color: white;
+  color: black;
+}
+#current-formula {
+  width: 100%;
+  height: 70%;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2rem;
+}
+#input-wrapper {
+  width: 100%;
+  height: 70%;
+  display: flex;
+}
+#main-area {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#side-area {
+  height: 100%;
+}
+.panel {
+  --panel-width: calc(var(--calculator-width) / 4);
+  --panel-height: calc(100% / 5);
+  width: var(--panel-width);
+  height: calc(100% / 5);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-position: center;
+  transition: background 0.4s;
+}
+.panel:hover {
+  background: #bababa radial-gradient(circle, transparent 1%, #bababa 1%)
+    center/15000%;
+}
+.panel:active {
+  background-color: #e5e4e4;
+  background-size: 40%;
+  transition: background 0s;
+}
+.black {
+  background-color: #121212;
+}
+.purple {
+  background-color: #8301c4;
+}
+.yellow {
+  background-color: #f6fe01;
+}
+.black,
+.purple {
+  color: white;
+}
